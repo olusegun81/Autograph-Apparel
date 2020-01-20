@@ -1,0 +1,563 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-sizing: inherit;
+ }
+                                
+body {
+font-family: "Lato", Arial, Helvetica, sans-serif;
+font-size: 1.6rem;
+font-weight: 400;
+line-height: 1.7;
+color: #777;
+padding: 3rem;
+box-sizing: border-box;
+}
+                                
+.header {
+height: 95vh;
+background-image: linear-gradient(#b70aca65, #000000), url(../images/flyguyz.png);
+background-size: cover;
+background-position: top;
+-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+position: relative;
+
+ }
+                                
+.logo-box {
+position: absolute;
+top: 4rem;
+left: 4rem;
+}
+                                
+.logo {
+height: 1rem;
+}
+                                
+.logo:hover {
+ animation-name: moveInRight;
+ animation-duration: 1s;
+ }
+                                
+.text-box {
+position: absolute;
+top: 45%;
+left: 30%;
+transform: translate(-20%, -50%);
+text-align: center;
+}
+                                
+.head {
+color: #fff;
+text-transform: uppercase;
+text-align: center;
+margin-bottom: 4rem;
+}
+                                
+.headings {
+    display: block;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    text-align: center;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    }
+                                
+    .headers {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 100;
+    letter-spacing: 2rem;
+    text-align: center;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    }
+                                
+    @keyframes moveInLeft {
+            0% {
+    opacity: 0;
+    transform: translate(-10rem);
+        }
+    100% {
+    opacity: 1;
+    transform: translate(0);
+    }
+     }
+    @keyframes moveInRight {
+    0% {
+    opacity: 0;
+    transform: translate(10rem);
+ }
+    100% {
+    opacity: 1;
+    transform: translate(0);
+    }
+       }
+
+                               
+    @keyframes moveInBottom {
+        0% {
+opacity: 0;
+transform: translateY(30px);
+    }
+
+ 
+100% {
+opacity: 1;
+transform: translate(0);
+}
+   }
+ 
+       /* BUTTON */
+.button:link,
+.button:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:.8rem 4rem ;
+    display: inline-block;
+    border-radius: 3rem;
+    transition: all .2s;
+    position: relative;
+    z-index:-1;
+    transition:all .4s;
+    
+}
+
+.button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.button:active{
+    transform:translateY(-1px);
+    box-shadow: 0 5px 5px rgba(0,0,0,.2);
+}
+
+.button-white{
+    background-color: #fff;
+    color: #777;
+    
+}
+
+.button::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index:-1;
+    transition: all .4s;
+
+}
+
+.button-white::after{
+    background-color: #fff;
+}
+
+.button:hover::after{
+    transform: scaleX(1.5)scaleY(1.6);
+    opacity: 0;
+}
+
+
+
+.row{
+    max-width:114rem ;
+    /*; */
+    margin:0 auto;
+    margin-bottom: 80px;
+}
+.row:not(:last-child){
+    margin-bottom: 8rem;
+}
+
+.col span-1-of-2{
+    width: calc((100%-6rem)/2);
+    background-color:#8c0505;
+    float: left;
+}
+
+.row:not(:last-child){
+    margin-right: 8rem;
+}
+
+
+
+
+
+
+.section-about {
+    background-color: #f7f7f7;
+    padding: 10rem 0;
+    margin-top: -20vh;
+}
+
+.heading-about {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, #15adf365, #31034da9);
+    -webkit-background-clip:text;
+    color: transparent;
+    letter-spacing: 2px;
+    transition: all .2s;
+    padding-left: 5rem;
+}
+                                
+.heading-about:hover {
+    transform: skewY(2deg) skewX(15deg)scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba(0, 0, 0, 0.466);
+}
+
+.u-center-text{
+    text-align: center;
+}
+
+.u-margin-bottom-3{
+    margin-bottom: 3rem;
+}
+
+.training{
+    font-size: 1.6rem;
+    font-weight:700 ;
+    text-transform: uppercase;
+}
+
+.text-1{
+    font-size: 1.2rem;
+}
+
+.text-1:not(:last-child){
+    margin-bottom: 2rem;
+}
+
+.u-margin-bottom-2{
+    margin-bottom: 1rem;
+}
+
+.btn-text:link,
+.btn-text:visited {
+    font-size: 1.2rem;
+    color: #8c0505;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid #8c0505;
+    padding: 3px;
+    transition: all .2s;
+}
+                                
+.btn-text:hover {
+ background-color: #000;
+ color: white;
+ box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.63);
+ transform: translateY(-2px);
+}
+                                
+.btn-text:active {
+ box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.514);
+ transform: translateY(0);
+}
+
+.composition{
+    position: relative;
+}
+.photo{
+    /* width: 70%; */
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.384);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 1rem;
+}
+.img1{
+    left:-5%;
+    top:-5rem;
+}
+.img2{
+    left:2%;
+    top:6rem;
+}
+.img3{
+    left: 20%;
+    top:4rem;
+}
+.photo:hover{
+    outline: 1.5rem solid #8c0505;
+    transform:scale(1.05) translateY(.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.808);
+    z-index: 20;
+
+}
+.composition:hover .photo:not(:hover){
+    transform: scale(.95);
+}
+
+/* <!-- ROTATING CARD --> */
+
+.rotate-card{
+    background-color:#d6d4d4; 
+    padding: 2rem 2rem 6rem 2rem ;
+    align-content: center;
+
+    
+}
+
+.box{
+    perspective: 150rem;
+    -moz-perspective:150rem;
+    position: relative;
+    height: 32rem;
+    
+}
+
+.box-side{
+    background-color: #8c0505;
+    height: 32rem;
+    transition: all .8s ease;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.459);
+    
+
+}
+
+.box-side-front{
+    background-color: #e9e8ea;
+
+}
+
+.box-side-back{
+    background-color:#777;
+    transform: rotateY(180deg);
+    
+}
+
+.box:hover .box-side-front{
+    transform: rotateY(-180deg);
+}
+
+.box:hover .box-side-back{
+    transform: rotateY(0);
+}
+
+.box-side-back-1{
+background-image:linear-gradient(#b70aca65,#250344);
+   
+}
+
+.box-side-back-2{
+    background-image:linear-gradient(#6de2f765,#022355);;
+}   
+
+.box-side-back-3{
+    background-image:linear-gradient(#fed603,#f77a06);
+}  
+
+.box-picture{
+    background-size: cover;
+    /* background-image:linear-gradient(#b70aca65,#250344), url(../images/flygirl.jpg); */
+    background-image: url(../images/flygirl.jpg);
+    height: 20rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0,100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0,100% 85%, 0 100%);
+    
+}
+
+.box-picture-2{
+    background-size: cover;
+    /* background-image:linear-gradient(#b70aca65,#250344), url(../images/flyboy.jpg); */
+    background-image: url(../images/flyboy.jpg);
+    height: 20rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0,100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0,100% 85%, 0 100%);
+    
+}
+
+.box-picture-3{
+    background-size: cover;
+    background-image:linear-gradient(#b70aca65,#250344), url(../images/child.jpg);
+    background-image: url(../images/child.jpg);
+    height: 20rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0,100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0,100% 85%, 0 100%);
+    
+}
+
+
+.box-heading{
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position:absolute;
+    top:12rem;
+    right:2rem;
+    width:75%;
+
+}
+
+.heading-span{
+    padding:0.2rem;
+    background-image:linear-gradient(#b70aca65,#250344);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+}
+
+.heading-span-2{
+    padding:0.2rem;
+    background-image:linear-gradient(#a6ecf865,#0a326d);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+}
+
+.heading-span-3{
+    padding:0.2rem;
+    /* background-image:linear-gradient(#a6ecf865,#0a326d); */
+    background-image:linear-gradient(#fed603,#f77a06);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+}
+
+
+
+.box-details{
+    padding:1rem;
+}
+
+.box-details ul{
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+}
+ 
+.box-details li{
+    text-align: center;
+    font-size:1.5rem;
+    
+}
+.box-details li:not(:last-child){
+    border-bottom:1px solid #eee ;
+    
+}
+.box-cta{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%) ;
+    text-align: center;
+    width: 90%;
+}
+
+.box-pricebox{
+    text-align: center;
+    margin-bottom: 8rem;
+    color: white;
+}
+
+
+.box-only-price{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+}
+
+.box-value{
+    font-size: 6rem;
+    font-weight: 100;
+}
+
+/* SECTION-STORIES */
+
+.section-stories{
+    padding: 15rem 0;
+    background-color: #250344;
+    backface-visibility: hidden;
+}
+
+.story{
+    width: 75%;
+    margin: 0 auto ;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.459);
+    background-color:#fff;
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: 1.6rem;
+    transform: skew(-12deg);
+    backface-visibility: hidden;
+}
+
+.story-shape{
+    width: 15rem;
+    height: 15rem;
+    float:left;
+    background-color: orange;   
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-2.5rem) skew(12deg);
+    position: relative;
+    backface-visibility: hidden;
+}
+
+.story-text{
+transform: skew(12deg);
+backface-visibility: hidden;
+}
+
+.story-caption{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, 20%);
+color:#fff ;
+text-transform: uppercase;
+font-size: 1.7rem;
+text-align: center;
+opacity: 0;
+transition: all .5s;
+backface-visibility: hidden;
+}
+
+.story-image{
+    transform: scale(1.4);
+    transition: all .5s;
+    backface-visibility: hidden;
+
+    
+}
+.story:hover, .story-caption {
+    opacity:1;
+    transform: translate(-50%,-50%);
+    
+
+}
+
+.story:hover, .story-image{
+    transform: scale(1);
+    filter: blur(3px) brightness(80%);
+}
+
